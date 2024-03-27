@@ -4,10 +4,28 @@ site_url: https://duetorun.com/
 # 指定主题
 # theme: readthedocs
 
+# includes by default: meta, toc, tables, fenced_code
+markdown_extensions:
+  ##############################
+  # Python Markdown Extensions
+  - toc:
+      permalink: "#"
+      separator: "_"
+  # cause newlines to be treated as hard breaks
+  - nl2br
+  # do not allow the mixing of list types
+  - sane_lists
+  - footnotes
+  ##############################
+  # Third Party Extensions
+  # pip install markdown-checklist
+  - markdown_checklist.extension
+
 # 页面导航
 nav:
   - Home: index.md
   - Mkdocs:
     - First Glance: mkdocs/First_Glance.md
     - Getting Started: mkdocs/Getting_Started.md
+    - Markdown Extensions: mkdocs/markdown_extensions.md
   - About: about.md
