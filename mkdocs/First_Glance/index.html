@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://duetorun.com/mkdocs/First_Glance/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>First Glance - 逃跑计划</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">逃跑计划</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mkdocs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">First Glance</a>
+</li>
+                                    
+<li>
+    <a href="../Getting_Started/" class="dropdown-item">Getting Started</a>
+</li>
+                                    
+<li>
+    <a href="../markdown_extensions/" class="dropdown-item">Markdown Extensions</a>
+</li>
+                                    
+<li>
+    <a href="../customizing_theme/" class="dropdown-item">Customizing Theme</a>
+</li>
+                                    
+<li>
+    <a href="../configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../deployment/" class="dropdown-item">Deployment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Getting_Started/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#pip_install_mkdocs" class="nav-link">pip install mkdocs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#mkdocs_new" class="nav-link">mkdocs new 新建工程</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#mkdocs_serve" class="nav-link">mkdocs serve 启动服务</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#markdown" class="nav-link">编写 Markdown 文档</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><a href="https://www.mkdocs.org/">MkDocs</a></p>
+<ul>
+<li>@<a href="https://pypi.org/project/mkdocs/">pypi</a></li>
+<li>@<a href="https://github.com/mkdocs/mkdocs">github</a></li>
+</ul>
+<p>Project documentation with Markdown.</p>
+<p>MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file. Start by reading the introductory tutorial, then check the User Guide for more information.</p>
+<h2 id="pip_install_mkdocs">pip install mkdocs<a class="headerlink" href="#pip_install_mkdocs" title="Permanent link">#</a></h2>
+<p>参考 User Guide - <a href="https://www.mkdocs.org/user-guide/installation/">MkDocs Installation</a>。</p>
+<p>使用 pip 安装 mkdocs：</p>
+<pre><code class="language-bash">$ pip install mkdocs
+</code></pre>
+<p>执行 <code>mkdocs -V</code> 查看版本：</p>
+<pre><code class="language-bash">$ mkdocs -V
+mkdocs, version 1.5.3 from /usr/local/lib/python3.10/site-packages/mkdocs (Python 3.10)
+ Sites
+</code></pre>
+<p>执行 <code>mkdocs --help</code> 查看帮助:</p>
+<pre><code class="language-bash">$ mkdocs --help
+Usage: mkdocs [OPTIONS] COMMAND [ARGS]...
+
+  MkDocs - Project documentation with Markdown.
+
+Options:
+  -V, --version         Show the version and exit.
+  -q, --quiet           Silence warnings
+  -v, --verbose         Enable verbose output
+  --color / --no-color  Force enable or disable color and wrapping for the output.
+                        Default is auto-detect.
+  -h, --help            Show this message and exit.
+
+Commands:
+  build      Build the MkDocs documentation
+  get-deps   Show required PyPI packages inferred from plugins in mkdocs.yml
+  gh-deploy  Deploy your documentation to GitHub Pages
+  new        Create a new MkDocs project
+  serve      Run the builtin development server
+</code></pre>
+<p>详情参考 User Guide - <a href="https://www.mkdocs.org/user-guide/cli/">Command Line Interface</a>。</p>
+<hr />
+<p>If you are using Windows/ubuntu, some of the above commands may not work out-of-the-box.</p>
+<p>A quick solution may be to preface every Python command with <code>python -m</code> like this:</p>
+<pre><code class="language-Shell">python -m pip install mkdocs
+python -m mkdocs
+</code></pre>
+<p>For a more permanent solution, you may need to edit your <code>PATH</code> environment variable to include the Scripts directory of your Python installation. Recent versions of Python include a script to do this for you.</p>
+<h2 id="mkdocs_new">mkdocs new 新建工程<a class="headerlink" href="#mkdocs_new" title="Permanent link">#</a></h2>
+<p>在 ~/Sites 目录下新建一个名为 <code>mkdocs</code> 工程：</p>
+<pre><code class="language-bash">$ cd ~/Sites
+$ mkdocs new mkdocs
+</code></pre>
+<p>默认生成了模板文件，目录结构如下：</p>
+<pre><code class="language-bash">$ tree -L 2 mkdocs
+mkdocs
+├── docs
+│   └── index.md
+└── mkdocs.yml
+
+2 directories, 2 files
+</code></pre>
+<ol>
+<li>docs 下存放 markdown 文档，index.md 为首页框架描述，参考 <a href="https://www.mkdocs.org/user-guide/writing-your-docs/#index-pages">Index pages</a>。</li>
+<li>mkdocs.yml 为网站配置文件，默认只有一行：<code>site_name: My Docs</code>。</li>
+</ol>
+<p>关于配置文件，参考官网 User Guide - <a href="https://www.mkdocs.org/user-guide/configuration/">Configuration</a>。</p>
+<blockquote>
+<p>As a minimum, this configuration file must contain the site_name. All other settings are optional.</p>
+</blockquote>
+<h2 id="mkdocs_serve">mkdocs serve 启动服务<a class="headerlink" href="#mkdocs_serve" title="Permanent link">#</a></h2>
+<p>进入新建的工程目录：</p>
+<pre><code class="language-bash">$ cd mkdocs
+</code></pre>
+<p>执行 serve 命令启动本地 web 服务器：</p>
+<pre><code class="language-bash">$ mkdocs serve
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.09 seconds
+INFO    -  [20:46:56] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [20:46:56] Serving on http://127.0.0.1:8000/
+</code></pre>
+<p>在浏览器中打开 http://localhost:8000，就可以查看新建的 mkdocs 工程了。</p>
+<h2 id="markdown">编写 Markdown 文档<a class="headerlink" href="#markdown" title="Permanent link">#</a></h2>
+<p>参考 User Guide - <a href="https://www.mkdocs.org/user-guide/writing-your-docs/">Writing your docs</a>。</p>
+<p>MkDocs pages must be authored in <a href="https://daringfireball.net/projects/markdown/">Markdown</a>.</p>
+<blockquote>
+<p>Files and directories with names which begin with a <strong>dot</strong> (for example: .foo.md or .bar/baz.md) are ignored by MkDocs. This can be overridden with the <code>exclude_docs</code> config.</p>
+</blockquote>
+<hr />
+<p>Mkdocs 使用 Markdown 语法编写文档，可以使用任何文本编辑器进行编辑。</p>
+<p>在 docs 文件夹下新建文档 <code>mkdocs介绍.md</code>，在浏览器中查看实时效果。</p>
+<p>可以看到新增的文章自动加到首页 site_name 右边，文章标题首字母自动大写。</p>
+<blockquote>
+<p>如果在文章开头添加一级标题 <code># title</code> 将替代文章标题显示在网站上。</p>
+</blockquote>
+<p>接下来，我们在 docs 下新建 mkdocs 文件夹，并将 <code>mkdocs介绍.md</code> 移入其中。</p>
+<pre><code class="language-bash">$ tree -L 3 .
+.
+├── docs
+│   ├── index.md
+│   └── mkdocs
+│       └── mkdocs介绍.md
+└── mkdocs.yml
+
+3 directories, 3 files
+</code></pre>
+<p>此时，网站蓝色导航栏多了一个 Mkdocs 菜单入口，点击下拉可以看到这个目录下的文章列表。</p>
+<ul>
+<li>Mkdocs 将自动按照目录结构，生成相应的层叠菜单。</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

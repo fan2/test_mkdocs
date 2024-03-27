@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://duetorun.com/mkdocs/markdown_extensions/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Markdown Extensions - 逃跑计划</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">逃跑计划</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mkdocs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../First_Glance/" class="dropdown-item">First Glance</a>
+</li>
+                                    
+<li>
+    <a href="../Getting_Started/" class="dropdown-item">Getting Started</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Markdown Extensions</a>
+</li>
+                                    
+<li>
+    <a href="../customizing_theme/" class="dropdown-item">Customizing Theme</a>
+</li>
+                                    
+<li>
+    <a href="../configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../deployment/" class="dropdown-item">Deployment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Getting_Started/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../customizing_theme/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#markdown_extensions" class="nav-link">markdown_extensions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#more_extensions" class="nav-link">More extensions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#yaml_style_meta-data" class="nav-link">YAML Style Meta-Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>User Guide - <a href="https://www.mkdocs.org/user-guide/writing-your-docs/">Writing your docs</a>。</p>
+<p>MkDocs pages must be authored in <a href="https://daringfireball.net/projects/markdown/">Markdown</a>.</p>
+<p>MkDocs uses the <a href="https://python-markdown.github.io/">Python-Markdown</a> library to render Markdown documents to HTML.</p>
+<h2 id="markdown_extensions">markdown_extensions<a class="headerlink" href="#markdown_extensions" title="Permanent link">#</a></h2>
+<p>MkDocs includes support for extending the Markdown syntax with Python-Markdown <a href="https://python-markdown.github.io/extensions/">extensions</a>. See the MkDocs' <a href="https://www.mkdocs.org/user-guide/configuration/#markdown_extensions">markdown_extensions</a> configuration setting for details on how to enable extensions.</p>
+<p>MkDocs includes some extensions by default, which are highlighted below.</p>
+<ol>
+<li>Internal links: <code>toc</code></li>
+<li>Meta-Data: <code>meta</code></li>
+<li>Tables: <code>tables</code></li>
+<li>
+<p>Fenced code blocks: <code>fenced_code</code></p>
+<ul>
+<li>貌似默认主题已带代码高亮，参考 <a href="https://www.mkdocs.org/user-guide/choosing-your-theme/">Choosing your Theme</a> - mkdocs。</li>
+</ul>
+</li>
+</ol>
+<p>建议启用以下扩展：</p>
+<ol>
+<li><code>nl2br</code></li>
+<li><code>sane_lists</code></li>
+<li><code>footnotes</code></li>
+<li><code>codehilite</code>: 需要安装 Pygments</li>
+</ol>
+<h2 id="more_extensions">More extensions<a class="headerlink" href="#more_extensions" title="Permanent link">#</a></h2>
+<p><a href="https://www.mkdocs.org/user-guide/configuration/">User Guide</a> - Configuration</p>
+<p>Formatting options | markdown_extensions</p>
+<p>The Python-Markdown documentation provides a <a href="https://python-markdown.github.io/extensions/">list of extensions</a> which are available out-of-the-box. For a list of configuration options available for a given extension, see the documentation for that extension.</p>
+<p>You may also install and use various third party extensions (<a href="https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions">Python-Markdown wiki</a>, <a href="https://github.com/mkdocs/catalog">MkDocs project catalog</a>). Consult the documentation provided by those extensions for installation instructions and available configuration options.</p>
+<h3 id="checklist">checklist<a class="headerlink" href="#checklist" title="Permanent link">#</a></h3>
+<p><a href="https://github.com/FND/markdown-checklist">checklist</a>: Adds GitHub-style task lists with checkboxes</p>
+<p>执行 <code>pip install markdown-checklist</code> 安装扩展插件，然后在 mkdocs.yml 中引入：</p>
+<pre><code class="language-YAML">markdown_extensions:
+
+   - markdown_checklist.extension
+</code></pre>
+<ul class="checklist">
+<li><input type="checkbox" disabled> undo1</li>
+<li><input type="checkbox" disabled> undo2</li>
+<li><input type="checkbox" disabled checked> done1</li>
+<li><input type="checkbox" disabled checked> done2</li>
+</ul>
+<h2 id="yaml_style_meta-data">YAML Style Meta-Data<a class="headerlink" href="#yaml_style_meta-data" title="Permanent link">#</a></h2>
+<p>YAML style meta-data consists of YAML key/value pairs wrapped in YAML style delimiters to mark the start and/or end of the meta-data. The first line of a document must be <code>---</code>. The meta-data ends at the first line containing an end deliminator (either <code>---</code> or <code>...</code>). The content between the delimiters is parsed as YAML.</p>
+<pre><code class="language-YAML">---
+title: My Document
+summary: A brief description of my document.
+authors:
+    - Waylan Limberg
+    - Tom Christie
+date: 2018-07-10
+some_url: https://example.com
+---
+This is the first paragraph of the document.
+</code></pre>
+<p>YAML is able to detect data types. Therefore, in the above example, the values of <code>title</code>, <code>summary</code> and <code>some_url</code> are strings, the value of <code>authors</code> is a list of strings and the value of <code>date</code> is a datetime.date object. Note that the YAML keys are case sensitive and MkDocs expects keys to be all lowercase. The top level of the YAML must be a collection of key/value pairs, which results in a Python dict being returned. If any other type is returned or the YAML parser encounters an error, then MkDocs does not recognize the section as meta-data, the page's meta attribute will be empty, and the section is not removed from the document.</p>
+<p>关于 metadata 的扩展使用案例，参考：</p>
+<ul>
+<li><a href="https://shafish.cn/blog/mkdocs/">Mkdocs Material使用记录</a></li>
+<li><a href="https://zimohan.com/it/materialmkdocs.html">Material for MkDocs改动的几个地方</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

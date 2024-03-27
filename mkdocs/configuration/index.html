@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://duetorun.com/mkdocs/configuration/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Configuration - 逃跑计划</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">逃跑计划</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mkdocs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../First_Glance/" class="dropdown-item">First Glance</a>
+</li>
+                                    
+<li>
+    <a href="../Getting_Started/" class="dropdown-item">Getting Started</a>
+</li>
+                                    
+<li>
+    <a href="../markdown_extensions/" class="dropdown-item">Markdown Extensions</a>
+</li>
+                                    
+<li>
+    <a href="../customizing_theme/" class="dropdown-item">Customizing Theme</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../deployment/" class="dropdown-item">Deployment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../customizing_theme/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../deployment/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#documentation_layout" class="nav-link">Documentation layout</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>User Guide - <a href="https://www.mkdocs.org/user-guide/configuration/">Configuration</a></p>
+<h2 id="documentation_layout">Documentation layout<a class="headerlink" href="#documentation_layout" title="Permanent link">#</a></h2>
+<h3 id="exclude_docs">exclude_docs<a class="headerlink" href="#exclude_docs" title="Permanent link">#</a></h3>
+<blockquote>
+<p>New in version 1.5</p>
+</blockquote>
+<p>This config defines patterns of files (under <a href="https://www.mkdocs.org/user-guide/configuration/#docs_dir"><code>docs_dir</code></a>) to not be picked up into the built site.</p>
+<p>Example:</p>
+<pre><code>exclude_docs: |
+  api-config.json    # A file with this name anywhere.
+  drafts/            # A "drafts" directory anywhere.
+  /requirements.txt  # Top-level "docs/requirements.txt".
+  *.py               # Any file with this extension anywhere.
+  !/foo/example.py   # But keep this particular file.
+</code></pre>
+<p>This follows the <a href="https://git-scm.com/docs/gitignore#_pattern_format">.gitignore pattern format</a>.</p>
+<p>Note that <code>mkdocs serve</code> does <em>not</em> follow this setting and instead displays excluded documents but with a "DRAFT" mark. To prevent this effect, you can run <code>mkdocs serve --clean</code>.</p>
+<p>The following defaults are always implicitly prepended - to exclude dot-files (and directories) as well as the top-level <code>templates</code> directory:</p>
+<pre><code>exclude_docs: |
+  .*
+  /templates/
+</code></pre>
+<p>So, in order to really start this config fresh, you'd need to specify a negated version of these entries first.</p>
+<p>Otherwise you could for example opt only certain dot-files back into the site:</p>
+<pre><code>exclude_docs: |
+  !.assets  # Don't exclude '.assets' although all other '.*' are excluded
+</code></pre>
+<h3 id="not_in_nav">not_in_nav<a class="headerlink" href="#not_in_nav" title="Permanent link">#</a></h3>
+<blockquote>
+<p>New in version 1.5</p>
+</blockquote>
+<p><strong>Not</strong>e: This option does <em>not</em> actually exclude anything from the nav.</p>
+<p>If you want to include some docs into the site but intentionally exclude them from the nav, normally MkDocs warns about this.</p>
+<p>Adding such patterns of files (relative to <a href="https://www.mkdocs.org/user-guide/configuration/#docs_dir"><code>docs_dir</code></a>) into the <code>not_in_nav</code> config will prevent such warnings.</p>
+<p>Example:</p>
+<pre><code>nav:
+  - Foo: foo.md
+  - Bar: bar.md
+
+not_in_nav: |
+  /private.md
+</code></pre>
+<p>As the previous option, this follows the .gitignore pattern format.</p>
+<p><strong>Note</strong>: Adding a given file to <a href="https://www.mkdocs.org/user-guide/configuration/#exclude_docs"><code>exclude_docs</code></a> takes precedence over and implies <code>not_in_nav</code>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
