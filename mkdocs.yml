@@ -1,1 +1,13 @@
-site_name: My Docs
+site_name: 逃跑计划
+site_url: https://duetorun.com/
+
+# 指定主题
+# theme: readthedocs
+
+# 页面导航
+nav:
+  - Home: index.md
+  - Mkdocs:
+    - First Glance: mkdocs/First_Glance.md
+    - Getting Started: mkdocs/Getting_Started.md
+  - About: about.md
