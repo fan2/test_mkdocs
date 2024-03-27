@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://duetorun.com/mkdocs/Getting_Started/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Getting Started - 逃跑计划</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">逃跑计划</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mkdocs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../First_Glance/" class="dropdown-item">First Glance</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Getting Started</a>
+</li>
+                                    
+<li>
+    <a href="../markdown_extensions/" class="dropdown-item">Markdown Extensions</a>
+</li>
+                                    
+<li>
+    <a href="../customizing_theme/" class="dropdown-item">Customizing Theme</a>
+</li>
+                                    
+<li>
+    <a href="../configuration/" class="dropdown-item">Configuration</a>
+</li>
+                                    
+<li>
+    <a href="../deployment/" class="dropdown-item">Deployment</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../First_Glance/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../markdown_extensions/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#getting_started" class="nav-link">Getting Started</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#site_name_site_url" class="nav-link">site_name &amp; site_url</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#adding_pages_to_nav" class="nav-link">adding pages to nav</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#change_theme" class="nav-link">change theme</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#change_favicon" class="nav-link">change Favicon</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#building_the_site" class="nav-link">Building the site</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="toc">
+<ul>
+<li><a href="#getting_started">Getting Started</a><ul>
+<li><a href="#site_name_site_url">site_name &amp; site_url</a></li>
+<li><a href="#adding_pages_to_nav">adding pages to nav</a></li>
+<li><a href="#change_theme">change theme</a></li>
+<li><a href="#change_favicon">change Favicon</a></li>
+<li><a href="#building_the_site">Building the site</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="getting_started">Getting Started<a class="headerlink" href="#getting_started" title="Permanent link">#</a></h1>
+<p><a href="https://www.mkdocs.org/getting-started/">Getting Started</a></p>
+<h2 id="site_name_site_url">site_name &amp; site_url<a class="headerlink" href="#site_name_site_url" title="Permanent link">#</a></h2>
+<p>The <code>site_name</code> and <code>site_url</code> configuration options are the only two <strong>required</strong> options in your configuration file. When you create a new project, the <code>site_url</code> option is assigned the placeholder value: https://example.com. If the final location is known, you can change the setting now to point to it. Or you may choose to leave it alone for now. Just be sure to edit it before you deploy your site to a production server.</p>
+<p>修改站点名称，并指定 URL 链接：</p>
+<pre><code class="language-YAML">site_name: 逃跑计划
+site_url: https://duetorun.com/
+</code></pre>
+<h2 id="adding_pages_to_nav">adding pages to nav<a class="headerlink" href="#adding_pages_to_nav" title="Permanent link">#</a></h2>
+<p>参考 User Guide - <a href="https://www.mkdocs.org/user-guide/writing-your-docs/">Writing your docs</a> - Configure Pages and Navigation:</p>
+<p>The <code>nav</code> configuration setting in your mkdocs.yml file defines which pages are included in the global site navigation menu as well as the structure of that menu. If not provided, the navigation will be automatically created by discovering all the Markdown files in the documentation directory. An automatically created navigation configuration will always be sorted alphanumerically by file name (except that index files will always be listed first within a sub-section). You will need to manually define your navigation configuration if you would like your navigation menu sorted differently.</p>
+<p>All paths in the navigation configuration must be relative to the <code>docs_dir</code> configuration option with default value <code>docs</code>.</p>
+<p>Any pages not listed in your navigation configuration will still be rendered and included with the built site, however, they will not be linked from the global navigation and will not be included in the previous and next links. Such pages will be "<strong>hidden</strong>" unless linked to directly.</p>
+<hr />
+<p>As our documentation site will include some navigation headers, you may want to edit the configuration file and add some information about the order, title, and nesting of each page in the navigation header by adding a <code>nav</code> setting.</p>
+<p>添加 nav 导航，导航栏依次是 <code>逃跑计划</code>、<code>Home</code>、<code>About</code>。</p>
+<pre><code class="language-YAML">site_name: 逃跑计划
+site_url: https://duetorun.com/
+
+# 页面导航
+nav:
+  - Home: index.md
+  - About: about.md
+</code></pre>
+<p>添加页面 <code>mkdocs/mkdocs介绍.md</code>，并将其添加到导航：</p>
+<pre><code class="language-YAML"># 页面导航
+nav:
+  - Home: index.md
+  - Mkdocs: mkdocs/mkdocs介绍.md
+  - About: about.md
+</code></pre>
+<p>以上配置后，在导航栏的 <code>Home</code> 和 <code>About</code> 间插入 <code>Mkdocs</code>。</p>
+<p>如果想导航栏按照目录层次生成层级菜单，可以在 nav 中配置：</p>
+<pre><code class="language-YAML">- Mkdocs:
+  - mkdocs: mkdocs/mkdocs介绍.md
+</code></pre>
+<p>以上配置中，导航栏一级入口 <code>Mkdocs</code>，点击下拉的次级文章标题为 <code>mkdocs</code>。<br />
+也可依此继续配置三级、四级层叠菜单。</p>
+<blockquote>
+<p>Note that if a title is defined for a page in the navigation, that title will be used throughout the site for that page and will override any title defined within the page itself.</p>
+</blockquote>
+<p>如果没有指定次级标题，首选文首的一级标题 <code># title</code>，其次文件名（英文首字母大写）。</p>
+<pre><code class="language-YAML">  - Mkdocs:
+    - mkdocs/mkdocs介绍.md
+</code></pre>
+<blockquote>
+<p>Titles <strong>inferred</strong> from the contents of the Markdown file or, if no title is defined within the file, of the file name. To override the title in the <code>nav</code> setting add a title right before the filename.</p>
+</blockquote>
+<p><a href="https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown">Writing with Markdown</a> - Meta-Data:</p>
+<p>MkDocs will attempt to determine the title of a document in the following ways, in order:</p>
+<ol>
+<li>A title defined in the <code>nav</code> configuration setting for a document.</li>
+<li>A title defined in the <code>title</code> meta-data key of a document.</li>
+<li>A <code>level 1</code> Markdown header on the first line of the document body.</li>
+<li>The <code>filename</code> of a document.</li>
+</ol>
+<h2 id="change_theme">change theme<a class="headerlink" href="#change_theme" title="Permanent link">#</a></h2>
+<p>Now change the configuration file to alter how the documentation is displayed by changing the theme. Edit the mkdocs.yml file and add a <code>theme</code> setting:</p>
+<pre><code>theme: readthedocs
+</code></pre>
+<p>关于主题，详情参考官网相关说明：</p>
+<ol>
+<li>
+<p>Home | Features: Great themes available</p>
+<p>There's a stack of good looking themes available for MkDocs. Choose between the built in themes: <code>mkdocs</code> and <code>readthedocs</code>, select one of the third-party themes (on the <a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes">MkDocs Themes</a> wiki page as well as the <a href="https://github.com/mkdocs/catalog#-theming">MkDocs Catalog</a>), or build your own.</p>
+</li>
+<li>
+<p>User Guide 相关专题：</p>
+<ul>
+<li><a href="https://www.mkdocs.org/user-guide/choosing-your-theme/">Choosing your Theme</a></li>
+<li><a href="https://www.mkdocs.org/user-guide/customizing-your-theme/">Customizing Your Theme</a></li>
+<li><a href="https://www.mkdocs.org/user-guide/localizing-your-theme/">Localizing Your Theme</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="change_favicon">change Favicon<a class="headerlink" href="#change_favicon" title="Permanent link">#</a></h2>
+<p>By default, MkDocs uses the <a href="https://www.mkdocs.org/img/favicon.ico">MkDocs favicon</a> icon. To use a different icon, create an <code>img</code> subdirectory in the <code>docs</code> directory and copy your custom <code>favicon.ico</code> file to that directory. MkDocs will automatically detect and use that file as your favicon icon.</p>
+<p>默认自动检测 docs/img/favicon.ico 作为图标。可自己制作或网上搜索喜欢的ico，存放为 docs/img/favicon.ico。</p>
+<p>这个不够灵活，material 主题支持指定任意格式的图片文件作为 theme|favicon。</p>
+<h2 id="building_the_site">Building the site<a class="headerlink" href="#building_the_site" title="Permanent link">#</a></h2>
+<p>Execute <code>mkdocs build</code> to build the documentation.<br />
+This will create a new directory, named <code>site</code>.</p>
+<p><code>site</code> 目录即是 mkdocs 这个 static site generator 生成（generate）的静态网页。</p>
+<p>可以将其部署到服务器，以下为 ubuntu/nginx 下最简单的本地部署：</p>
+<pre><code class="language-Shell">$ sudo mv /usr/share/nginx/html/ /usr/share/nginx/html_bak/
+$ sudo ln -s /home/pifan/Sites/mkdocs/site/ /usr/share/nginx/html
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
