@@ -21,6 +21,10 @@ markdown_extensions:
   # pip install markdown-checklist
   - markdown_checklist.extension
 
+# 编译忽略
+exclude_docs: |
+  drafts/
+
 # 页面导航
 nav:
   - Home: index.md
@@ -28,4 +32,6 @@ nav:
     - First Glance: mkdocs/First_Glance.md
     - Getting Started: mkdocs/Getting_Started.md
     - Markdown Extensions: mkdocs/markdown_extensions.md
+    - Customizing Theme: mkdocs/customizing_theme.md
+    - Configuration: mkdocs/configuration.md
   - About: about.md
