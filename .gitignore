@@ -3,4 +3,5 @@
 .DAV
 # macOS cache
 *.DS_Store
-
+# static site
+site/
